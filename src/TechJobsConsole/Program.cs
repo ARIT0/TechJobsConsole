@@ -126,21 +126,21 @@ namespace TechJobsConsole
 
             if (someJobs.Any() == false)
             {
-                Console.WriteLine("********\n{0}\n********", "No jobs found");
+                Console.WriteLine("*****\n{0}\n*****", "No results");
             }
             else
             {
 
                 foreach (Dictionary<string, string> jobs in someJobs)
                 {
-                    Console.WriteLine("********");
+                    Console.WriteLine("*****");
 
                     foreach (KeyValuePair<string, string> description in jobs)
                     {
                         Console.WriteLine("{0}: {1}", description.Key, description.Value);
                     }
 
-                    Console.WriteLine("********\n");
+                    Console.WriteLine("*****\n");
                 }
             }
         }

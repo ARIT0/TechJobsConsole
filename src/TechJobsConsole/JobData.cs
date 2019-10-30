@@ -49,7 +49,7 @@ namespace TechJobsConsole
             {
                 string aValue = row[column];
 
-                if (aValue.Contains(value))
+                if (0 <= aValue.IndexOf(value, System.StringComparison.CurrentCultureIgnoreCase))
                 {
                     jobs.Add(row);
                 }

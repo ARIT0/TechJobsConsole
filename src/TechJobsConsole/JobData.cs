@@ -13,6 +13,14 @@ namespace TechJobsConsole
         public static List<Dictionary<string, string>> FindAll()
         {
             LoadData();
+
+            List<Dictionary<string, string>> jobs = new List<Dictionary<string, string>>();
+
+            foreach (Dictionary<string, string> job in AllJobs)
+            {
+                jobs.Add(job);
+            }
+
             return AllJobs;
         }
 
@@ -35,6 +43,7 @@ namespace TechJobsConsole
                     values.Add(aValue);
                 }
             }
+            values.Sort();
             return values;
         }
 
@@ -54,7 +63,6 @@ namespace TechJobsConsole
                     jobs.Add(row);
                 }
             }
-
             return jobs;
         }
 
